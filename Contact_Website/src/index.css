@@ -173,3 +173,52 @@ h1, h2, h3, h4 {
   mix-blend-mode: multiply; /* Removes white background from logo */
   filter: contrast(1.1);
 }
+/* Mobile Responsiveness Utilities */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.8rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem !important;
+  }
+  
+  .section-padding {
+    padding: 60px 15px !important;
+  }
+  
+  .header-container {
+    padding: 10px 15px !important;
+    margin-top: 10px !important;
+    border-radius: 16px !important;
+  }
+  
+  .stats-container {
+    flex-direction: column !important;
+    gap: 40px !important;
+    margin-top: 60px !important;
+  }
+  
+  .logo-text {
+    font-size: 1.1rem !important;
+  }
+  
+  .logo-badge {
+    width: 35px !important;
+    height: 35px !important;
+    font-size: 1.1rem !important;
+  }
+
+  .form-container {
+    padding: 25px !important;
+  }
+
+  .footer-grid {
+    gap: 30px !important;
+    padding-left: 0 !important;
+  }
+  
+  .footer-section {
+    padding-left: 0 !important;
+  }
+}

@@ -1,6 +1,9 @@
 const Header = () => {
   return (
-    <header className="glass" style={{
+    <header className="header-container" style={{ 
+      background: 'rgba(255, 255, 255, 0.8)',
+      backdropFilter: 'blur(10px)',
+      borderRadius: '24px',
       position: 'sticky',
       top: '20px',
       margin: '0 20px',
@@ -14,7 +17,7 @@ const Header = () => {
     }}>
         {/* Stylized Logo */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', cursor: 'default' }}>
-          <div style={{
+          <div className="logo-badge" style={{
             background: 'linear-gradient(135deg, var(--primary), var(--secondary))',
             color: 'white',
             width: '45px',
@@ -32,7 +35,7 @@ const Header = () => {
             BP
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.1' }}>
-            <span style={{ 
+            <span className="logo-text" style={{ 
               fontWeight: '800', 
               fontSize: '1.3rem', 
               color: 'var(--text)',

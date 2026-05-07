@@ -66,9 +66,9 @@ const RegistrationForm = () => {
   };
 
   return (
-    <section id="register" style={{ padding: '80px 20px' }}>
+    <section id="register" className="section-padding" style={{ padding: '80px 20px' }}>
       <div className="container" style={{ maxWidth: '650px' }}>
-        <div className="glass" style={{ padding: '50px' }}>
+        <div className="glass form-container" style={{ padding: '50px' }}>
           <div style={{ textAlign: 'center', marginBottom: '40px' }}>
             <h2 style={{ fontSize: '2.5rem', marginBottom: '10px' }}>Register Now</h2>
             <h3 className="sinhala" style={{ fontSize: '1.4rem', color: 'var(--text-muted)', fontWeight: '500' }}>

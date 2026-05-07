@@ -2,12 +2,12 @@ import { Users, ArrowRight, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section style={{
+    <section className="animate-fade-in section-padding" style={{
       padding: '120px 20px',
       textAlign: 'center',
       maxWidth: '1000px',
       margin: '0 auto'
-    }} className="animate-fade-in">
+    }}>
       <div style={{ 
         display: 'inline-flex', 
         alignItems: 'center', 
@@ -23,10 +23,10 @@ const Hero = () => {
         <Sparkles size={16} /> ADMISSIONS OPEN FOR 2026
       </div>
       
-      <h1 style={{ fontSize: '4.5rem', marginBottom: '24px', lineHeight: '1.1', color: 'var(--text)' }}>
+      <h1 className="hero-title" style={{ fontSize: '4.5rem', marginBottom: '24px', lineHeight: '1.1', color: 'var(--text)' }}>
         Maths & Science <span style={{ color: 'var(--primary)' }}>Easy Learning</span>
       </h1>
-      <h2 className="sinhala" style={{ fontSize: '1.8rem', color: 'var(--text-muted)', marginBottom: '40px', fontWeight: '500', maxWidth: '800px', margin: '0 auto 40px' }}>
+      <h2 className="sinhala hero-subtitle" style={{ fontSize: '1.8rem', color: 'var(--text-muted)', marginBottom: '40px', fontWeight: '500', maxWidth: '800px', margin: '0 auto 40px' }}>
         O/L විභාගයට සාර්ථකව මුහුණ දීමට අවශ්‍ය ගණිතය හා විද්‍යාව පාඩම් සරලව ඉගෙන ගන්න.
       </h2>
       
@@ -39,7 +39,7 @@ const Hero = () => {
         </a>
       </div>
       
-      <div style={{ marginTop: '100px', display: 'flex', justifyContent: 'center', gap: '80px' }}>
+      <div className="stats-container" style={{ marginTop: '100px', display: 'flex', justifyContent: 'center', gap: '80px' }}>
         <div style={{ textAlign: 'center' }}>
           <div style={{ color: 'var(--primary)', fontSize: '2.5rem', fontWeight: '800' }}>1000+</div>
           <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px' }}>Students</div>

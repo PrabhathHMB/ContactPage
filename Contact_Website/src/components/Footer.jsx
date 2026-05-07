@@ -2,15 +2,15 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer style={{ padding: '80px 20px', borderTop: '1px solid rgba(0, 0, 0, 0.05)', background: '#ffffff' }}>
+    <footer className="section-padding" style={{ padding: '80px 20px', borderTop: '1px solid rgba(0, 0, 0, 0.05)', background: '#ffffff' }}>
       <div className="container">
-        <div style={{
+        <div className="footer-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
           gap: '50px',
           marginBottom: '60px'
         }}>
-          <div>
+          <div className="footer-section">
             <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '25px' }}>
               <img
                 src="/logo.png"
@@ -27,7 +27,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div style={{ paddingLeft: '20px' }}>
+          <div className="footer-section" style={{ paddingLeft: '20px' }}>
             <h4 style={{ marginBottom: '24px', fontSize: '1.2rem', color: 'var(--text)' }}>Contact Info</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px', color: 'var(--text-muted)' }}>
@@ -52,7 +52,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div style={{ paddingLeft: '20px' }}>
+          <div className="footer-section" style={{ paddingLeft: '20px' }}>
             <h4 style={{ marginBottom: '24px', fontSize: '1.2rem', color: 'var(--text)' }}>Quick Links</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
               <a href="#register" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = 'var(--primary)'} onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}>Register for Classes</a>
