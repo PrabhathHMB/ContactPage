@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Send, Phone, User, GraduationCap, School } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -21,40 +22,47 @@ const RegistrationForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Prepared Email data (You can use EmailJS for this)
-    // To enable, install: npm install @emailjs/browser
-    /*
-    import emailjs from '@emailjs/browser';
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+    // EmailJS Configuration
+    // Replace these with your actual EmailJS credentials
+    const SERVICE_ID = 'service_oxndf7z';
+    const TEMPLATE_ID = 'template_tlle5fk';
+    const PUBLIC_KEY = '5w722dwfpIA77AxB0';
+
+    const templateParams = {
       from_name: formData.fullName,
       school: formData.school,
       grade: formData.grade,
       whatsapp: formData.whatsappNumber,
-      subject: formData.subject,
+      subject: formData.subject.toUpperCase(),
       to_email: 'b.p.science.academy1@gmail.com'
-    }, 'YOUR_PUBLIC_KEY');
-    */
+    };
 
-    // Prepare WhatsApp Message
-    const message = `*New Student Registration - B.P. Science Academy*%0A%0A` +
-      `*Full Name:* ${formData.fullName}%0A` +
-      `*School:* ${formData.school}%0A` +
-      `*Grade:* ${formData.grade}%0A` +
-      `*WhatsApp:* ${formData.whatsappNumber}%0A` +
-      `*Subject:* ${formData.subject.toUpperCase()}%0A%0A` +
-      `Submitted via Website.`;
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
 
-    // Send to WhatsApp
-    const whatsappUrl = `https://wa.me/94764982653?text=${message}`;
-    
-    // Open in new tab
-    window.open(whatsappUrl, '_blank');
-    
-    // Success simulation
-    setTimeout(() => {
-      alert('Registration details prepared! Please send the message on WhatsApp to complete registration.');
-      setIsSubmitting(false);
-    }, 500);
+        // Open WhatsApp Community Link
+        const communityUrl = 'https://chat.whatsapp.com/CTUY3jiaMNRHuycTTID0OL';
+        window.open(communityUrl, '_blank');
+
+        alert('Registration Successful! Your details have been emailed to the academy. You are now being redirected to our WhatsApp Community.');
+
+        // Reset form
+        setFormData({
+          fullName: '',
+          school: '',
+          grade: '',
+          whatsappNumber: '',
+          subject: 'math'
+        });
+      })
+      .catch((err) => {
+        console.error('FAILED...', err);
+        alert('Failed to send registration details. Please try again or contact us via WhatsApp directly.');
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -170,12 +178,12 @@ const RegistrationForm = () => {
               style={{ width: '100%', justifyContent: 'center', marginTop: '10px' }}
               disabled={isSubmitting}
             >
-              {isSubmitting ? 'Processing...' : 'Register & Join via WhatsApp'}
+              {isSubmitting ? 'Processing...' : 'Register & Join Community'}
               <Send size={18} />
             </button>
-            
+
             <p style={{ textAlign: 'center', fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '20px' }}>
-              Your details will be sent to +94764982653 and b.p.science.academy1@gmail.com
+              Your details will be emailed to b.p.science.academy1@gmail.com
             </p>
           </form>
         </div>

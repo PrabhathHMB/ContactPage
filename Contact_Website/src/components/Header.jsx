@@ -12,24 +12,45 @@ const Header = () => {
       marginTop: '20px',
       border: 'none'
     }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-        <img 
-          src="/logo.png" 
-          alt="B.P. Science Academy Logo" 
-          className="logo-img"
-          style={{ height: '60px', width: 'auto' }}
-          onError={(e) => {
-            e.target.style.display = 'none';
-            e.target.nextSibling.style.display = 'block';
-          }}
-        />
-        <div style={{ fontWeight: '800', fontSize: '1.2rem', color: 'var(--text)' }}>
-          B.P. SCIENCE ACADEMY
+        {/* Stylized Logo */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', cursor: 'default' }}>
+          <div style={{
+            background: 'linear-gradient(135deg, var(--primary), var(--secondary))',
+            color: 'white',
+            width: '45px',
+            height: '45px',
+            borderRadius: '12px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            fontWeight: '800',
+            fontSize: '1.4rem',
+            fontFamily: "'Outfit', sans-serif",
+            boxShadow: '0 8px 16px rgba(37, 99, 235, 0.2)',
+            transform: 'rotate(-5deg)'
+          }}>
+            BP
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.1' }}>
+            <span style={{ 
+              fontWeight: '800', 
+              fontSize: '1.3rem', 
+              color: 'var(--text)',
+              fontFamily: "'Outfit', sans-serif",
+              letterSpacing: '-0.5px'
+            }}>
+              SCIENCE <span style={{ color: 'var(--primary)' }}>ACADEMY</span>
+            </span>
+            <span className="sinhala" style={{ 
+              fontSize: '0.75rem', 
+              color: 'var(--text-muted)', 
+              fontWeight: '600',
+              letterSpacing: '1px'
+            }}>
+              B.P. විද්‍යා ඇකඩමිය
+            </span>
+          </div>
         </div>
-        <div className="sinhala" style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: '500' }}>
-          බී.පී. සයන්ස් ඇකඩමි
-        </div>
-      </div>
       
       <nav style={{ display: 'flex', gap: '20px' }}>
         <a href="#register" className="btn btn-primary" style={{ padding: '10px 24px', fontSize: '0.95rem' }}>
