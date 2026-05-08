@@ -10,11 +10,11 @@ const About = () => {
   ];
 
   return (
-    <section style={{ padding: '100px 20px', background: '#ffffff' }}>
+    <section className="section-padding" style={{ background: '#ffffff' }}>
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '60px', alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px', alignItems: 'center' }}>
           <div>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '20px', color: 'var(--primary)' }}>Maths & Science Easy Learning</h2>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '20px', color: 'var(--primary)' }} className="hero-title">Maths & Science Easy Learning</h2>
             <p className="sinhala" style={{ fontSize: '1.2rem', color: 'var(--text)', marginBottom: '30px', lineHeight: '1.8' }}>
               BP Maths & Science Academy තුළ O/L ගණිතය හා විද්යාව විෂයන් සරල, පැහැදිලි සහ සිසුන්ට තේරුම් ගත හැකි ආකාරයෙන් ඉගැන්වේ. 
               ප්රශ්න පත්ර සාකච්ඡා, පුනරීක්ෂණ, විභාග සූදානම් කිරීම සහ තනි අවධානය යටතේ ඉගැන්වීම් සිදු කරයි. 
@@ -27,10 +27,10 @@ const About = () => {
             </div>
           </div>
 
-          <div className="grid" style={{ gap: '20px' }}>
+          <div className="grid" style={{ gap: '15px' }}>
             {features.map((f, i) => (
-              <div key={i} className="glass" style={{ padding: '20px', display: 'flex', alignItems: 'center', gap: '20px', border: 'none', background: '#f8fafc' }}>
-                <div style={{ color: 'var(--primary)', background: 'white', padding: '12px', borderRadius: '12px', boxShadow: '0 4px 10px rgba(0,0,0,0.05)' }}>
+              <div key={i} className="glass" style={{ padding: '15px', display: 'flex', alignItems: 'center', gap: '15px', border: 'none', background: '#f8fafc' }}>
+                <div style={{ color: 'var(--primary)', background: 'white', padding: '10px', borderRadius: '10px', boxShadow: '0 4px 10px rgba(0,0,0,0.05)' }}>
                   {f.icon}
                 </div>
                 <div>

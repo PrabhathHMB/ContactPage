@@ -66,11 +66,11 @@ const RegistrationForm = () => {
   };
 
   return (
-    <section id="register" className="section-padding" style={{ padding: '80px 20px' }}>
+    <section id="register" className="section-padding">
       <div className="container" style={{ maxWidth: '650px' }}>
-        <div className="glass form-container" style={{ padding: '50px' }}>
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '10px' }}>Register Now</h2>
+        <div className="glass form-container" style={{ padding: '40px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '30px' }}>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '10px' }} className="hero-title">Register Now</h2>
             <h3 className="sinhala" style={{ fontSize: '1.4rem', color: 'var(--text-muted)', fontWeight: '500' }}>
               දැන්ම ලියාපදිංචි වන්න
             </h3>

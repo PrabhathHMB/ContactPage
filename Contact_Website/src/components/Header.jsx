@@ -13,10 +13,11 @@ const Header = () => {
       justifyContent: 'space-between',
       alignItems: 'center',
       marginTop: '20px',
-      border: 'none'
+      border: 'none',
+      gap: '15px'
     }}>
         {/* Stylized Logo */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', cursor: 'default' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', cursor: 'default', minWidth: '0' }}>
           <div className="logo-badge" style={{
             background: 'linear-gradient(135deg, var(--primary), var(--secondary))',
             color: 'white',
@@ -24,6 +25,7 @@ const Header = () => {
             height: '45px',
             borderRadius: '12px',
             display: 'flex',
+            flexShrink: 0,
             justifyContent: 'center',
             alignItems: 'center',
             fontWeight: '800',
@@ -34,13 +36,14 @@ const Header = () => {
           }}>
             BP
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.1' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.1', overflow: 'hidden' }}>
             <span className="logo-text" style={{ 
               fontWeight: '800', 
               fontSize: '1.3rem', 
               color: 'var(--text)',
               fontFamily: "'Outfit', sans-serif",
-              letterSpacing: '-0.5px'
+              letterSpacing: '-0.5px',
+              whiteSpace: 'nowrap'
             }}>
               SCIENCE <span style={{ color: 'var(--primary)' }}>ACADEMY</span>
             </span>
@@ -48,15 +51,18 @@ const Header = () => {
               fontSize: '0.75rem', 
               color: 'var(--text-muted)', 
               fontWeight: '600',
-              letterSpacing: '1px'
+              letterSpacing: '1px',
+              whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis'
             }}>
               B.P. විද්‍යා ඇකඩමිය
             </span>
           </div>
         </div>
       
-      <nav style={{ display: 'flex', gap: '20px' }}>
-        <a href="#register" className="btn btn-primary" style={{ padding: '10px 24px', fontSize: '0.95rem' }}>
+      <nav style={{ display: 'flex', flexShrink: 0 }}>
+        <a href="#register" className="btn btn-primary" style={{ padding: '10px 20px', fontSize: '0.9rem' }}>
           Register
         </a>
       </nav>

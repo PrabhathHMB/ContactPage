@@ -2,13 +2,13 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="section-padding" style={{ padding: '80px 20px', borderTop: '1px solid rgba(0, 0, 0, 0.05)', background: '#ffffff' }}>
+    <footer className="section-padding" style={{ borderTop: '1px solid rgba(0, 0, 0, 0.05)', background: '#ffffff' }}>
       <div className="container">
         <div className="footer-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: '50px',
-          marginBottom: '60px'
+          gap: '40px',
+          marginBottom: '50px'
         }}>
           <div className="footer-section">
             <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '25px' }}>
@@ -16,7 +16,7 @@ const Footer = () => {
                 src="/logo.png"
                 alt="B.P. Science Academy Logo"
                 className="logo-img"
-                style={{ height: '70px', width: 'auto' }}
+                style={{ height: '60px', width: 'auto' }}
               />
               <div style={{ fontWeight: '800', fontSize: '1.2rem', color: 'var(--text)', lineHeight: '1.2' }}>
                 B.P. SCIENCE<br />ACADEMY
@@ -27,7 +27,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="footer-section" style={{ paddingLeft: '20px' }}>
+          <div className="footer-section">
             <h4 style={{ marginBottom: '24px', fontSize: '1.2rem', color: 'var(--text)' }}>Contact Info</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px', color: 'var(--text-muted)' }}>
@@ -46,24 +46,23 @@ const Footer = () => {
                 <div style={{ color: 'var(--primary)', background: '#eff6ff', padding: '10px', borderRadius: '10px' }}>
                   <MapPin size={18} />
                 </div>
-                <span style={{ fontWeight: '500' }}>No 94,Alakolagala Boragas
-                  ,Nuwaraeliya-welimada Road ,Sri Lanka</span>
+                <span style={{ fontWeight: '500' }}>No 94,Alakolagala Boragas, Nuwaraeliya-welimada Road, Sri Lanka</span>
               </div>
             </div>
           </div>
 
-          <div className="footer-section" style={{ paddingLeft: '20px' }}>
+          <div className="footer-section">
             <h4 style={{ marginBottom: '24px', fontSize: '1.2rem', color: 'var(--text)' }}>Quick Links</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-              <a href="#register" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = 'var(--primary)'} onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}>Register for Classes</a>
-              <a href="https://chat.whatsapp.com/CTUY3jiaMNRHuycTTID0OL" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = 'var(--primary)'} onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}>WhatsApp Community</a>
-              <a href="https://www.facebook.com/share/1E5gVS8K4Z/" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s' }} onMouseEnter={(e) => e.target.style.color = 'var(--primary)'} onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}>Facebook Page</a>
+              <a href="#register" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s' }}>Register for Classes</a>
+              <a href="https://chat.whatsapp.com/CTUY3jiaMNRHuycTTID0OL" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s' }}>WhatsApp Community</a>
+              <a href="https://www.facebook.com/share/1E5gVS8K4Z/" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontWeight: '500', transition: 'color 0.3s' }}>Facebook Page</a>
             </div>
           </div>
         </div>
 
         <div style={{
-          paddingTop: '40px',
+          paddingTop: '30px',
           borderTop: '1px solid #f1f5f9',
           textAlign: 'center',
           color: 'var(--text-muted)',

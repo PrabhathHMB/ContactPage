@@ -3,7 +3,6 @@ import { Users, ArrowRight, Sparkles } from 'lucide-react';
 const Hero = () => {
   return (
     <section className="animate-fade-in section-padding" style={{
-      padding: '120px 20px',
       textAlign: 'center',
       maxWidth: '1000px',
       margin: '0 auto'
@@ -39,7 +38,7 @@ const Hero = () => {
         </a>
       </div>
       
-      <div className="stats-container" style={{ marginTop: '100px', display: 'flex', justifyContent: 'center', gap: '80px' }}>
+      <div className="stats-container" style={{ marginTop: '80px', display: 'flex', justifyContent: 'center', gap: '60px', flexWrap: 'wrap' }}>
         <div style={{ textAlign: 'center' }}>
           <div style={{ color: 'var(--primary)', fontSize: '2.5rem', fontWeight: '800' }}>1000+</div>
           <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '1px' }}>Students</div>

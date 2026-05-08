@@ -2,13 +2,14 @@ import { Award, GraduationCap, Mail, Phone } from 'lucide-react';
 
 const Tutor = () => {
   return (
-    <section style={{ padding: '100px 20px', background: '#f8fafc' }}>
+    <section className="section-padding" style={{ background: '#f8fafc' }}>
       <div className="container">
-        <div className="glass" style={{ padding: '60px', border: 'none', background: 'white', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px', alignItems: 'center' }}>
+        <div className="glass" style={{ padding: '40px', border: 'none', background: 'white', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px', alignItems: 'center' }}>
           <div style={{ textAlign: 'center' }}>
             <div style={{ 
-              width: '280px', 
-              height: '350px', 
+              width: '100%',
+              maxWidth: '280px', 
+              aspectRatio: '280/350',
               borderRadius: '24px', 
               margin: '0 auto 30px',
               display: 'flex',
@@ -36,44 +37,44 @@ const Tutor = () => {
               <Award size={28} style={{ color: 'var(--primary)' }} /> Qualifications & Expertise
             </h3>
             
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
-              <div style={{ display: 'flex', gap: '20px' }}>
-                <div style={{ color: 'var(--primary)', background: '#eff6ff', padding: '12px', borderRadius: '12px', height: 'fit-content' }}>
-                  <GraduationCap size={24} />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <div style={{ display: 'flex', gap: '15px' }}>
+                <div style={{ color: 'var(--primary)', background: '#eff6ff', padding: '10px', borderRadius: '12px', height: 'fit-content', flexShrink: 0 }}>
+                  <GraduationCap size={22} />
                 </div>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '1.1rem' }}>BSc (UG) University of Kelaniya</div>
-                  <div style={{ color: 'var(--text-muted)' }}>Specializing in Science & Mathematics</div>
+                  <div style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Specializing in Science & Mathematics</div>
                 </div>
               </div>
 
-              <div style={{ display: 'flex', gap: '20px' }}>
-                <div style={{ color: 'var(--primary)', background: '#eff6ff', padding: '12px', borderRadius: '12px', height: 'fit-content' }}>
-                  <GraduationCap size={24} />
+              <div style={{ display: 'flex', gap: '15px' }}>
+                <div style={{ color: 'var(--primary)', background: '#eff6ff', padding: '10px', borderRadius: '12px', height: 'fit-content', flexShrink: 0 }}>
+                  <GraduationCap size={22} />
                 </div>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '1.1rem' }}>BIT (UG) University of Colombo</div>
-                  <div style={{ color: 'var(--text-muted)' }}>Bachelor of Information Technology</div>
+                  <div style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Bachelor of Information Technology</div>
                 </div>
               </div>
 
-              <div style={{ display: 'flex', gap: '20px' }}>
-                <div style={{ color: 'var(--primary)', background: '#eff6ff', padding: '12px', borderRadius: '12px', height: 'fit-content' }}>
-                  <Phone size={24} />
+              <div style={{ display: 'flex', gap: '15px' }}>
+                <div style={{ color: 'var(--primary)', background: '#eff6ff', padding: '10px', borderRadius: '12px', height: 'fit-content', flexShrink: 0 }}>
+                  <Phone size={22} />
                 </div>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '1.1rem' }}>+94 76 498 2653</div>
-                  <div style={{ color: 'var(--text-muted)' }}>WhatsApp for direct inquiries</div>
+                  <div style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>WhatsApp for direct inquiries</div>
                 </div>
               </div>
 
-              <div style={{ display: 'flex', gap: '20px' }}>
-                <div style={{ color: 'var(--primary)', background: '#eff6ff', padding: '12px', borderRadius: '12px', height: 'fit-content' }}>
-                  <Mail size={24} />
+              <div style={{ display: 'flex', gap: '15px' }}>
+                <div style={{ color: 'var(--primary)', background: '#eff6ff', padding: '10px', borderRadius: '12px', height: 'fit-content', flexShrink: 0 }}>
+                  <Mail size={22} />
                 </div>
                 <div>
                   <div style={{ fontWeight: '700', fontSize: '1.1rem' }}>b.p.science.academy1@gmail.com</div>
-                  <div style={{ color: 'var(--text-muted)' }}>Email for official correspondence</div>
+                  <div style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>Email for official correspondence</div>
                 </div>
               </div>
             </div>
